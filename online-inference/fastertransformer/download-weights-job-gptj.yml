@@ -27,7 +27,7 @@ spec:
           git clone https://github.com/NVIDIA/FasterTransformer.git; 
           wget https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-vocab.json -P models; 
           wget https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-merges.txt -P models;
-          wget https://mystic.the-eye.eu/public/AI/GPT-J-6B/step_383500_slim.tar.gz;
+          wget https://the-eye.eu/public/AI/GPT-J-6B/step_383500_slim.tar.gz;
           tar -xzvf step_383500_slim.tar.gz -C /mnt/pvc/gptj-store/models;
           mkdir /mnt/pvc/gptj-store/triton-model-store/fastertransformer/1 -p; 
           python3 /mnt/pvc/gptj-store/FasterTransformer/examples/pytorch/gptj/utils/gptj_ckpt_convert.py --output-dir /mnt/pvc/gptj-store/triton-model-store/fastertransformer/1 --ckpt-dir /mnt/pvc/gptj-store/models/step_383500/ --n-inference-gpus 1;
